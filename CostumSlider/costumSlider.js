@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     content: {
-        left:10,
+        left:12,
         marginBottom:3,
         fontSize:12,
         color:'white',
