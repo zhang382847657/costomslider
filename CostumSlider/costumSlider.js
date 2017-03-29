@@ -43,12 +43,15 @@ class CostumSlider extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state={
-            left:0,//距离左边的位置
-            value:this.props.min,//默认当前值
-        };
 
-        this._initConfig = this._initConfig.bind(this);
+        this._initConfig();
+
+        let space = (this.props.max - this.props.min) / this.props.sep; //刻度之间一共有多少个间隔
+
+        this.state={
+            left:this.props.defaultValue?(lineWidth/space) * ((this.props.defaultValue-this.props.min)/this.props.sep):0,//距离左边的位置
+            value:this.props.defaultValue?this.props.defaultValue:this.props.min,//默认当前值
+        };
 
     }
 
@@ -57,7 +60,7 @@ class CostumSlider extends React.Component {
             onStartShouldSetPanResponder: () => true,
             onMoveShouldSetPanResponder: ()=> true,
             onPanResponderGrant: ()=>{
-                this._left = this.state.left
+                    this._left = this.state.left;
             },
             onPanResponderMove: (evt,gs)=>{  //监听滑块移动
 
@@ -65,8 +68,6 @@ class CostumSlider extends React.Component {
                 let newLeft = this._left+gs.dx;//距离左边的间距
                 let newValue = this.props.min;//滑块上方显示的值
 
-
-                console.log("aaaaa"+lineWidth);
                 if(newLeft<0){ //如果滑块已经滑到最左边  则不能继续向左滑动
                     newLeft = 0;
                     newValue = this.props.min;
@@ -87,6 +88,10 @@ class CostumSlider extends React.Component {
                     left: newLeft,
                     value:newValue,
                 })
+
+                if(this.props.currentValue){ //回调返回当前值
+                    this.props.currentValue(newValue);
+                }
             },
 
         })
@@ -114,6 +119,7 @@ class CostumSlider extends React.Component {
     render() {
 
         this._initConfig();
+
 
         return (
             <View style={[styles.container,this.props.style]}>
