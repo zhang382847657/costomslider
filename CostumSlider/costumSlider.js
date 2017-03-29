@@ -194,6 +194,7 @@ const styles = StyleSheet.create({
     sliderChildView:{
         flex:1,
         backgroundColor:'#fb4b88',
+        borderRadius:3,
     },
     degreeView:{
         flexDirection: 'row',
