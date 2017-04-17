@@ -1,7 +1,7 @@
 # costomslider
 自定义滑块效果（带刻度）
 
-![](https://github.com/zhang382847657/costomslider/raw/master/image/Screen.png =375x667)
+![img-w375](https://github.com/zhang382847657/costomslider/raw/master/image/Screen.png)
 
 > ### 使用方法
 ```
