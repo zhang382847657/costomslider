@@ -14,3 +14,5 @@
               defaultValue={12} //默认选中的值
 />
 ```
+
+![](https://github.com/zhang382847657/costomslider.git/costomslider/image/Screen.png)
