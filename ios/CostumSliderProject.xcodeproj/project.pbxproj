@@ -35,6 +35,8 @@
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* CostumSliderProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CostumSliderProjectTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		634E16C71E97658800B6E113 /* react.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 634E16C51E97658800B6E113 /* react.bundle */; };
+		634E16C81E97658800B6E113 /* react.bundle.meta in Resources */ = {isa = PBXBuildFile; fileRef = 634E16C61E97658800B6E113 /* react.bundle.meta */; };
 		638C7CC71E8B959900A219C0 /* libART.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 638C7CAD1E8B958F00A219C0 /* libART.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
@@ -261,6 +263,9 @@
 		2D02E47B1E0B4A5D006451C7 /* CostumSliderProject-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CostumSliderProject-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* CostumSliderProject-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CostumSliderProject-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		634E16C51E97658800B6E113 /* react.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = react.bundle; sourceTree = "<group>"; };
+		634E16C61E97658800B6E113 /* react.bundle.meta */ = {isa = PBXFileReference; lastKnownFileType = file; path = react.bundle.meta; sourceTree = "<group>"; };
+		634E16C91E978E3100B6E113 /* CostumSliderProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = CostumSliderProject.entitlements; path = CostumSliderProject/CostumSliderProject.entitlements; sourceTree = "<group>"; };
 		638C7CA81E8B958F00A219C0 /* ART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ART.xcodeproj; path = "../node_modules/react-native/Libraries/ART/ART.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -399,6 +404,9 @@
 		13B07FAE1A68108700A75B9A /* CostumSliderProject */ = {
 			isa = PBXGroup;
 			children = (
+				634E16C91E978E3100B6E113 /* CostumSliderProject.entitlements */,
+				634E16C51E97658800B6E113 /* react.bundle */,
+				634E16C61E97658800B6E113 /* react.bundle.meta */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -589,6 +597,15 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 26429T4LED;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -869,6 +886,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				634E16C71E97658800B6E113 /* react.bundle in Resources */,
+				634E16C81E97658800B6E113 /* react.bundle.meta in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -1026,8 +1045,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 张 琳 (TYYXE4LBF9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 26429T4LED;
 				INFOPLIST_FILE = CostumSliderProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1036,6 +1058,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = CostumSliderProject;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1044,7 +1067,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 张 琳 (TYYXE4LBF9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26429T4LED;
 				INFOPLIST_FILE = CostumSliderProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1053,6 +1079,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = CostumSliderProject;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

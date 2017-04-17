@@ -18,8 +18,10 @@
 {
   NSURL *jsCodeLocation;
 
-  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
+  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil]; //不打包时执行这个
 
+//  jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"react" withExtension:@"bundle"];  //打包时执行这个
+  
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"CostumSliderProject"
                                                initialProperties:nil

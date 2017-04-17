@@ -45,7 +45,6 @@ class CostumSlider extends React.Component {
         super(props);
 
         this._initConfig();
-
         let space = (this.props.max - this.props.min) / this.props.sep; //刻度之间一共有多少个间隔
 
         this.state={
@@ -89,6 +88,7 @@ class CostumSlider extends React.Component {
                     value:newValue,
                 })
 
+
                 if(this.props.currentValue){ //回调返回当前值
                     this.props.currentValue(newValue);
                 }
@@ -120,14 +120,13 @@ class CostumSlider extends React.Component {
 
         this._initConfig();
 
-
         return (
             <View style={[styles.container,this.props.style]}>
                 {/* 显示提示词  例如  请选择宝宝年龄 */}
                 <Text style={styles.title}>{this.props.title}</Text>
                 {/* 显示滑动头部视图   背景图+当前值 值带单位  例如 '3岁' */}
                 <Image  source={icon} style={[styles.thumbView,{left:this.state.left}]}  {...this._panResponder.panHandlers}>
-                    <Text style={styles.content}>{this.state.value}{this.props.unit}</Text>
+                    <Text  style={styles.content}>{this.state.value}{this.props.unit}</Text>
                 </Image>
                 {/* 显示整个滑块条长度 */}
                 <View style={[styles.sliderView,{marginLeft:imageWidth/2,marginRight:imageWidth/2,}]}>
