@@ -1,6 +1,8 @@
 # costomslider
 自定义滑块效果（带刻度）
 
+![](https://github.com/zhang382847657/costomslider/raw/master/image/Screen.png)
+
 > ### 使用方法
 ```
 <CostumSlider style={{marginTop:60}}
@@ -15,4 +17,4 @@
 />
 ```
 
-![](https://github.com/zhang382847657/costomslider/raw/master/image/Screen.png)
+
