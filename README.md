@@ -15,4 +15,4 @@
 />
 ```
 
-![](https://github.com/zhang382847657/costomslider.git/costomslider/image/Screen.png)
+![](https://github.com/zhang382847657/costomslider/raw/master/image/Screen.png)
